@@ -30,4 +30,8 @@ app.get("/beta/songs",(req,res) => {
     res.send(songs[1].songs)
 })
 
+app.get("/realms",(req,res) => {
+    res.send(songs[2])
+})
+
 module.exports = {app};

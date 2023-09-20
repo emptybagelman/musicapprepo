@@ -1,5 +1,6 @@
 from apk import db
 from apk.albums.model import Album
+from apk.realms.model import Realm
 import json
 
 db.drop_all()
@@ -286,7 +287,12 @@ album2 = Album(album_name="Volume Beta",songs=json.dumps([
         ]
     ))
 
-db.session.add_all([album1,album2])
+realm1 = Realm(name="Yao-conomics",expired=False,members=14)
+realm2 = Realm(name="Jest for Success",expired=True,members=4)
+realm3 = Realm(name="One Piezza",expired=True,members=14)
+realm4 = Realm(name="Minecreact",expired=False,members=7)
+
+db.session.add_all([album1,album2,realm1,realm2,realm3,realm4])
 
 db.session.commit()
 print("\nCompleted. Database seeded")

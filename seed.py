@@ -1,6 +1,7 @@
 from apk import db
 from apk.albums.model import Album
 from apk.realms.model import Realm
+from apk.installations.model import Installation
 import json
 
 db.drop_all()
@@ -292,7 +293,9 @@ realm2 = Realm(name="Jest for Success",expired=True,members=4)
 realm3 = Realm(name="One Piezza",expired=True,members=14)
 realm4 = Realm(name="Minecreact",expired=False,members=7)
 
-db.session.add_all([album1,album2,realm1,realm2,realm3,realm4])
+inst1 = Installation(name="1.20.1", version="release 1.20.1", directory="C:/Users", resolution="2560x1440")
+
+db.session.add_all([album1,album2,realm1,realm2,realm3,realm4,inst1])
 
 db.session.commit()
 print("\nCompleted. Database seeded")

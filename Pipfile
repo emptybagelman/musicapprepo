@@ -14,7 +14,7 @@ gunicorn = "*"
 [dev-packages]
 
 [requires]
-python_version = "3.11"
+python_version = "3.11.1"
 
 [scripts]
 dev = "flask run -h 0.0.0.0" # <- for docker

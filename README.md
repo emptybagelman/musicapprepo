@@ -11,4 +11,11 @@ link here https://github.com/emptybagelman/Music-App
 
 # ROUTES
 
+## ```/albums```
 
+### Schema:
+
+
+
+GET ```/``` returns all albums
+POST ```/``` adds new album to db

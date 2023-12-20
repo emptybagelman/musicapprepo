@@ -10,11 +10,12 @@ flask-cors = "*"
 flask-sqlalchemy = "*"
 psycopg2-binary = "*"
 gunicorn = "*"
+werkzeug = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.11.1"
+python_version = "3.11"
 
 [scripts]
 dev = "flask run -h 0.0.0.0" # <- for docker

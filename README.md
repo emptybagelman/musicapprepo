@@ -41,7 +41,7 @@ interface Realm {
     id: number,
     name: string,
     expired: boolean,
-    members: number
+    members: number | null
 }
 ```
 
@@ -49,3 +49,23 @@ interface Realm {
 
 ### /
 - GET: returns all realms.
+
+# ```/installations```
+
+## Schema:
+
+```typescript
+interface Installation {
+    id: number,
+    name: string,
+    version: string,
+    directory: string,
+    resolution: string,
+    javaexec: string | null , 
+    jvm: string | null
+}
+```
+
+## Routes:
+
+### /

@@ -8,3 +8,7 @@ link here https://github.com/emptybagelman/Music-App
  - pip install pipenv
  - pipenv install
  - pipenv run dev
+
+# ROUTES
+
+

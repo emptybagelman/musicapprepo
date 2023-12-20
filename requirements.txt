@@ -27,3 +27,4 @@ six==1.16.0
 tzdata==2023.3
 urllib3==2.0.4
 virtualenv==20.24.5
+gunicorn==21.2.0

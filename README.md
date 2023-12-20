@@ -9,13 +9,43 @@ link here https://github.com/emptybagelman/Music-App
  - pipenv install
  - pipenv run dev
 
-# ROUTES
+# ```/albums```
 
-## ```/albums```
+## Schema:
 
-### Schema:
+```typescript
+interface Album {
+    id: number,
+    album_name: string,
+    songs: object
+}
+```
 
+## Routes:
 
+### /
+- GET: returns all albums.
+- POST: adds new album to db.
 
-GET ```/``` returns all albums
-POST ```/``` adds new album to db
+### /<int:id>
+- GET: returns album by id.
+- PATCH: updates attribute of album.
+- DELETE: removes album from table.
+
+# ```/realms```
+
+## Schema:
+
+```typescript
+interface Realm {
+    id: number,
+    name: string,
+    expired: boolean,
+    members: number
+}
+```
+
+## Routes:
+
+### /
+- GET: returns all realms.
